@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peer Tutoring Marketplace</title>
+  </head>
+  <body>
+    <header>
+      <h1>Peer Tutoring Marketplace</h1>
+      <p>Affordable, student-led tutoring for stronger grades and more confidence.</p>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#tutors">Tutors</a></li>
+          <li><a href="#booking">Book a session</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="tutors" aria-labelledby="tutors-heading">
+        <h2 id="tutors-heading">Meet our tutors</h2>
+
+        <article>
+          <h3>Maya Chen</h3>
+          <p><strong>Subject:</strong> Algebra II</p>
+          <p><strong>Rate:</strong> $18/hour</p>
+          <p>Patient, supportive instruction for homework help and exam prep.</p>
+        </article>
+
+        <article>
+          <h3>Jordan Patel</h3>
+          <p><strong>Subject:</strong> Biology</p>
+          <p><strong>Rate:</strong> $20/hour</p>
+          <p>Clear explanations for tricky concepts like genetics and cell processes.</p>
+        </article>
+
+        <article>
+          <h3>Elena Rodriguez</h3>
+          <p><strong>Subject:</strong> Writing &amp; Literature</p>
+          <p><strong>Rate:</strong> $16/hour</p>
+          <p>Focused feedback on essays, reading analysis, and revision strategies.</p>
+        </article>
+      </section>
+
+      <section id="booking" aria-labelledby="booking-heading">
+        <h2 id="booking-heading">Request a session</h2>
+
+        <form action="#" method="post">
+          <div>
+            <label for="student-name">Full name</label>
+            <input id="student-name" name="student-name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div>
+            <label for="student-email">Email address</label>
+            <input id="student-email" name="student-email" type="email" placeholder="you@example.com" required />
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="algebra-ii">Algebra II</option>
+              <option value="biology">Biology</option>
+              <option value="writing-literature">Writing &amp; Literature</option>
+              <option value="chemistry">Chemistry</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="session-date">Preferred date</label>
+            <input id="session-date" name="session-date" type="date" required />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you'd like help with."></textarea>
+          </div>
+
+          <button type="submit">Request session</button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>© 2026 Peer Tutoring Marketplace</p>
+      <p>Contact: hello@peertutoringmarketplace.com</p>
+    </footer>
+  </body>
+</html>
