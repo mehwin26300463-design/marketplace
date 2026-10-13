@@ -7,11 +7,16 @@
   --panel: #ffffff;
   --primary: #1d4ed8;
   --primary-dark: #163ea8;
+  --secondary: #0f172a;
   --text: #1f2937;
   --muted: #4b5563;
   --border: #dbe3ee;
   --accent: #e0ebff;
   --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -36,17 +41,28 @@ header {
 h1,
 h2,
 h3,
-p {
+p,
+ul {
   margin-top: 0;
 }
 
 h1 {
   margin-bottom: 0.5rem;
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--primary-dark);
+  line-height: 1.1;
 }
 
-header p {
+.site-brand {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.site-brand:hover,
+.site-brand:focus {
+  text-decoration: underline;
+}
+
+.site-branding p {
   margin-bottom: 1.25rem;
   color: var(--muted);
   font-size: 1.05rem;
@@ -92,12 +108,68 @@ section h2 {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
 }
 
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-panel {
+  background: linear-gradient(180deg, #eff6ff 0%, #f8fbff 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.button-link {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.8rem 1.3rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button-link.secondary {
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.button-link:hover,
+.button-link:focus {
+  filter: brightness(0.98);
+}
+
+.check-list {
+  padding-left: 1.2rem;
+  color: var(--muted);
+  margin: 0;
+}
+
 #tutors {
   display: grid;
   gap: 1.25rem;
 }
 
-#tutors article {
+.tutor-card {
   background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -106,33 +178,77 @@ section h2 {
   gap: 0.75rem;
 }
 
-#tutors h3 {
-  margin-bottom: 0.65rem;
-  color: var(--text);
-  font-size: 1.35rem;
+.meta {
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-weight: 700;
 }
 
-#tutors p {
-  margin-bottom: 0.35rem;
+.tutor-card a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tutor-card a:hover,
+.tutor-card a:focus {
+  text-decoration: underline;
+}
+
+.profile-layout {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.profile-summary,
+.profile-details,
+.profile-sidebar {
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.profile-summary h3,
+.profile-details h3,
+.profile-sidebar h3 {
+  margin-bottom: 0.75rem;
+}
+
+.profile-summary p,
+.profile-details p,
+.profile-sidebar p,
+.profile-details li {
   color: var(--muted);
 }
 
-#tutors video {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: #0f172a;
-  display: block;
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
 }
 
-#booking form {
+.info-list strong {
+  color: var(--text);
+}
+
+.form-grid {
   display: grid;
   gap: 1rem;
 }
 
-#booking div {
+#booking form,
+#tutor-form,
+#become-tutor-form {
+  display: grid;
+  gap: 1rem;
+}
+
+#booking div,
+#tutor-form div,
+#become-tutor-form div {
   display: grid;
   gap: 0.45rem;
 }
@@ -195,7 +311,25 @@ footer p {
 }
 
 @media (min-width: 700px) {
-  #tutors {
+  #tutors,
+  .profile-layout,
+  .form-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .profile-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .profile-details {
+    grid-column: 1 / 2;
+  }
+
+  .profile-sidebar {
+    grid-column: 2 / 3;
   }
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Become a tutor page for students who want to share their academic strengths and teach others through the Peer Tutoring Marketplace."
+    />
+    <title>Peer Tutoring Marketplace | Become a Tutor</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="site-branding">
+        <h1><a href="index.html" class="site-brand">Peer Tutoring Marketplace</a></h1>
+        <p>Affordable, student-led tutoring for stronger grades and more confidence.</p>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tutor.html">Tutor Profile</a></li>
+          <li><a href="become-a-tutor.html">Become a Tutor</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="become-heading">
+        <h2 id="become-heading">Become a tutor</h2>
+
+        <div class="profile-layout">
+          <article class="profile-summary">
+            <h3>Share what you know</h3>
+            <p>
+              Tutoring with Peer Tutoring Marketplace is a great way to help classmates, build your
+              teaching skills, and earn a flexible side income while staying connected to your own
+              academic community.
+            </p>
+            <ul class="check-list">
+              <li>Set your own availability</li>
+              <li>Choose the subjects you feel confident teaching</li>
+              <li>Support students with one-on-one academic guidance</li>
+            </ul>
+          </article>
+
+          <aside class="profile-sidebar" aria-label="Tutor requirements">
+            <h3>What we look for</h3>
+            <ul class="info-list">
+              <li><strong>Strong subject knowledge:</strong> A, B, or equivalent proficiency</li>
+              <li><strong>Communication:</strong> Clear and encouraging teaching style</li>
+              <li><strong>Reliability:</strong> Consistent scheduling and responsive communication</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section aria-labelledby="application-heading">
+        <h2 id="application-heading">Tutor registration</h2>
+
+        <form id="become-tutor-form" action="#" method="post">
+          <div class="form-grid">
+            <div>
+              <label for="tutor-name">Full name</label>
+              <input id="tutor-name" name="tutor-name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div>
+              <label for="tutor-email">Email address</label>
+              <input id="tutor-email" name="tutor-email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div>
+              <label for="tutor-subjects">Subjects you can teach</label>
+              <input id="tutor-subjects" name="tutor-subjects" type="text" placeholder="e.g. Algebra II, Biology" required />
+            </div>
+
+            <div>
+              <label for="tutor-rate">Preferred hourly rate</label>
+              <input id="tutor-rate" name="tutor-rate" type="text" placeholder="$15/hour" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="tutor-bio">Tell us about yourself</label>
+            <textarea id="tutor-bio" name="tutor-bio" rows="5" placeholder="Share your background, strengths, and teaching style."></textarea>
+          </div>
+
+          <button type="submit">Apply to tutor</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Peer Tutoring Marketplace</p>
+      <p>Contact: hello@peertutoringmarketplace.com</p>
+    </footer>
+  </body>
+</html>
