@@ -3,44 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Peer Tutoring Marketplace</title>
+    <meta
+      name="description"
+      content="Peer Tutoring Marketplace connects students with friendly tutors for academic support and exam prep."
+    />
+    <title>Peer Tutoring Marketplace | Home</title>
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <header>
-      <h1>Peer Tutoring Marketplace</h1>
-      <p>Affordable, student-led tutoring for stronger grades and more confidence.</p>
+      <div class="site-branding">
+        <h1><a href="index.html" class="site-brand">Peer Tutoring Marketplace</a></h1>
+        <p>Affordable, student-led tutoring for stronger grades and more confidence.</p>
+      </div>
       <nav aria-label="Main navigation">
         <ul>
-          <li><a href="#tutors">Tutors</a></li>
-          <li><a href="#booking">Book a session</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tutor.html">Tutor Profile</a></li>
+          <li><a href="become-a-tutor.html">Become a Tutor</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      <section class="hero" aria-labelledby="home-heading">
+        <div class="hero-copy">
+          <p class="eyebrow">Student support, reimagined</p>
+          <h2 id="home-heading">Find a tutor who matches your learning style.</h2>
+          <p>
+            From homework help to exam prep, our community of peer tutors gives students
+            confident, affordable support in the subjects they need most.
+          </p>
+          <div class="action-row">
+            <a class="button-link" href="#booking">Book a session</a>
+            <a class="button-link secondary" href="tutor.html">Meet a tutor</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Marketplace highlights">
+          <h3>Why students choose us</h3>
+          <ul class="check-list">
+            <li>Flexible scheduling</li>
+            <li>Affordable hourly rates</li>
+            <li>Supportive, peer-led instruction</li>
+          </ul>
+        </aside>
+      </section>
+
       <section id="tutors" aria-labelledby="tutors-heading">
-        <h2 id="tutors-heading">Meet our tutors</h2>
+        <div class="section-heading">
+          <h2 id="tutors-heading">Featured tutors</h2>
+        </div>
 
-        <article>
+        <article class="tutor-card">
           <h3>Maya Chen</h3>
-          <p><strong>Subject:</strong> Algebra II</p>
-          <p><strong>Rate:</strong> $18/hour</p>
+          <p class="meta">Algebra II • $18/hour</p>
           <p>Patient, supportive instruction for homework help and exam prep.</p>
+          <a href="tutor.html">View profile</a>
         </article>
 
-        <article>
+        <article class="tutor-card">
           <h3>Jordan Patel</h3>
-          <p><strong>Subject:</strong> Biology</p>
-          <p><strong>Rate:</strong> $20/hour</p>
+          <p class="meta">Biology • $20/hour</p>
           <p>Clear explanations for tricky concepts like genetics and cell processes.</p>
+          <a href="tutor.html">View profile</a>
         </article>
 
-        <article>
+        <article class="tutor-card">
           <h3>Elena Rodriguez</h3>
-          <p><strong>Subject:</strong> Writing &amp; Literature</p>
-          <p><strong>Rate:</strong> $16/hour</p>
+          <p class="meta">Writing &amp; Literature • $16/hour</p>
           <p>Focused feedback on essays, reading analysis, and revision strategies.</p>
+          <a href="tutor.html">View profile</a>
         </article>
       </section>
 
@@ -48,30 +80,34 @@
         <h2 id="booking-heading">Request a session</h2>
 
         <form action="#" method="post">
-          <div>
-            <label for="student-name">Full name</label>
-            <input id="student-name" name="student-name" type="text" placeholder="Your name" required />
+          <div class="form-grid">
+            <div>
+              <label for="student-name">Full name</label>
+              <input id="student-name" name="student-name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div>
+              <label for="student-email">Email address</label>
+              <input id="student-email" name="student-email" type="email" placeholder="you@example.com" required />
+            </div>
           </div>
 
-          <div>
-            <label for="student-email">Email address</label>
-            <input id="student-email" name="student-email" type="email" placeholder="you@example.com" required />
-          </div>
+          <div class="form-grid">
+            <div>
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="algebra-ii">Algebra II</option>
+                <option value="biology">Biology</option>
+                <option value="writing-literature">Writing &amp; Literature</option>
+                <option value="chemistry">Chemistry</option>
+              </select>
+            </div>
 
-          <div>
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject" required>
-              <option value="">Select a subject</option>
-              <option value="algebra-ii">Algebra II</option>
-              <option value="biology">Biology</option>
-              <option value="writing-literature">Writing &amp; Literature</option>
-              <option value="chemistry">Chemistry</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="session-date">Preferred date</label>
-            <input id="session-date" name="session-date" type="date" required />
+            <div>
+              <label for="session-date">Preferred date</label>
+              <input id="session-date" name="session-date" type="date" required />
+            </div>
           </div>
 
           <div>
@@ -84,7 +120,7 @@
       </section>
     </main>
 
-    <footer id="contact">
+    <footer>
       <p>© 2026 Peer Tutoring Marketplace</p>
       <p>Contact: hello@peertutoringmarketplace.com</p>
     </footer>
